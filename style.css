@@ -13,7 +13,7 @@ body, html {
 }
 
 .background-overlay {
-  background: url('https://www.cfmaeroengines.com/_next/image?url=https%3A%2F%2Fapp-cins01saas8d02vp001.cms.optimizely.com%2Fglobalassets%2Fsaf2016_0209531-1.jpg&w=1920&q=75') no-repeat center center/cover;
+  background: url('https://app-cins01saas8d02vp001.cms.optimizely.com/globalassets/saf2016_0209531-1.jpg') no-repeat center center/cover;
   height: 100vh;
   position: relative;
   display: flex;
@@ -26,7 +26,7 @@ body, html {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.55); /* dark overlay for contrast */
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .hero-content {
@@ -44,6 +44,20 @@ body, html {
 .hero-content p {
   font-size: 1.3rem;
   opacity: 0.9;
+}
+
+.about {
+  background: #0f172a;
+  color: #eee;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 footer {
