@@ -1,92 +1,55 @@
-/* Reset */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f4f8fc;
-  color: #333;
-  line-height: 1.6;
+body, html {
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  background-color: #000;
 }
 
-/* Hero Section */
-.hero {
-  background-image: url('https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=1950&q=80');
-  background-size: cover;
-  background-position: center;
+.background-overlay {
+  background: url('https://www.cfmaeroengines.com/_next/image?url=https%3A%2F%2Fapp-cins01saas8d02vp001.cms.optimizely.com%2Fglobalassets%2Fsaf2016_0209531-1.jpg&w=1920&q=75') no-repeat center center/cover;
   height: 100vh;
   position: relative;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 3rem;
   text-align: center;
-  width: 100%;
 }
 
-.hero h1 {
+.background-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay for contrast */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.25rem;
+.hero-content p {
+  font-size: 1.3rem;
   opacity: 0.9;
 }
 
-/* About & Services */
-section {
-  padding: 4rem 1rem;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #003366;
-}
-
-.about p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-}
-
-.services ul {
-  list-style: none;
-  padding-left: 0;
-  max-width: 700px;
-  margin: auto;
-}
-
-.services li {
-  background: #eef5ff;
-  border-left: 4px solid #003366;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  font-size: 1.05rem;
-}
-
-/* Footer */
 footer {
+  background: #000;
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #003366;
-  color: white;
+  padding: 1.5rem;
   font-size: 0.9rem;
+  color: #aaa;
 }
